@@ -431,8 +431,9 @@ GameObject:
   - component: {fileID: 397320318}
   - component: {fileID: 397320317}
   - component: {fileID: 397320316}
+  - component: {fileID: 397320319}
   m_Layer: 0
-  m_Name: model
+  m_Name: PlayerCol
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -470,7 +471,7 @@ CapsuleCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Height: 2
@@ -526,6 +527,33 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 397320314}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &397320319
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 397320314}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 1
 --- !u!1 &559199695
 GameObject:
   m_ObjectHideFlags: 0
@@ -1770,8 +1798,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4635919481113327339, guid: faccea551278a3f408e1da525b952b83, type: 3}
+      propertyPath: m_Radius
+      value: 0.55255175
+      objectReference: {fileID: 0}
+    - target: {fileID: 4635919481113327339, guid: faccea551278a3f408e1da525b952b83, type: 3}
+      propertyPath: m_Center.y
+      value: 0.052551746
+      objectReference: {fileID: 0}
+    - target: {fileID: 4635919481113327339, guid: faccea551278a3f408e1da525b952b83, type: 3}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4635919481113327339, guid: faccea551278a3f408e1da525b952b83, type: 3}
+      propertyPath: m_ProvidesContacts
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7652467835980332977, guid: faccea551278a3f408e1da525b952b83, type: 3}
       propertyPath: m_Name

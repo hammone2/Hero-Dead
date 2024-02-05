@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
-        Vector3 move = transform.right * x + transform.forward * z;
+        Vector3 move = transform.right * x + transform.forward * z; // normalize this later (player moves faster when moving in both directions)
 
         if(Input.GetButtonDown("Jump") && isGrounded)
         {
