@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class ItemBehavior : MonoBehaviour
 {
-
-    private void Start()
+    public GameBehaviour gameManager;
+    void Start()
     {
-        Debug.Log("item pick up start");
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameBehaviour>();
     }
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,6 +18,8 @@ public class ItemBehavior : MonoBehaviour
         {
             Destroy(this.transform.parent.gameObject);
             Debug.Log("Item Collected");
+
+            gameManager.Items += 1;
         }
     }
 }
