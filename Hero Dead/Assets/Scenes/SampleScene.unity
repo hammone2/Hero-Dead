@@ -213,6 +213,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d96a8d306ddc39c4a9dee45b4ea980b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showWinScreen: 0
+  labelText: Collect all 4 items and win your freedom!
+  maxItems: 4
+  maxHealth: 100
+  gunAmmo: 0
+  flameAmmo: 0
+  _playerHP: 10
 --- !u!4 &143003451
 Transform:
   m_ObjectHideFlags: 0
@@ -1733,6 +1740,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.443058, y: 0.12091339, z: 0.60649514}
   m_Center: {x: 0.022496223, y: -0.046626866, z: 0.036043882}
+--- !u!114 &1110370792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110370785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be0856b45f354394389ffc26977d7b0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  amount: 25
 --- !u!1001 &1415229765
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1930,7 +1951,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1589557670}
   - component: {fileID: 1589557672}
-  - component: {fileID: 1589557671}
+  - component: {fileID: 1589557673}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -1953,19 +1974,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2094855534}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1589557671
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1589557669}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fe3fa5532a0df8499c9e115725b025c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
 --- !u!65 &1589557672
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1987,6 +1995,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.2506199, y: 0.25101897, z: 0.32228565}
   m_Center: {x: -0.118956566, y: 0.08006333, z: 0.0058665276}
+--- !u!114 &1589557673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589557669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c64a84e86d81d54891d99044525d25f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  amount: 15
 --- !u!1 &1596782131
 GameObject:
   m_ObjectHideFlags: 0
@@ -1997,7 +2019,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1596782132}
   - component: {fileID: 1596782134}
-  - component: {fileID: 1596782133}
+  - component: {fileID: 1596782135}
   m_Layer: 0
   m_Name: Collider
   m_TagString: Untagged
@@ -2020,19 +2042,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 559960250}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1596782133
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1596782131}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fe3fa5532a0df8499c9e115725b025c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
 --- !u!65 &1596782134
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2054,6 +2063,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.16003609, y: 0.6350527, z: 1.6124482}
   m_Center: {x: -0.042455673, y: 0.765183, z: 0.58424234}
+--- !u!114 &1596782135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596782131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c64a84e86d81d54891d99044525d25f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  amount: 15
 --- !u!1001 &1702490328
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2513,6 +2536,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4635919481113327339, guid: faccea551278a3f408e1da525b952b83, type: 3}
+    - {fileID: 6162169411924391074, guid: faccea551278a3f408e1da525b952b83, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 796298997350181368, guid: faccea551278a3f408e1da525b952b83, type: 3}
@@ -2522,6 +2546,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7707964176837595725, guid: faccea551278a3f408e1da525b952b83, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1110370791}
+    - targetCorrespondingSourceObject: {fileID: 7707964176837595725, guid: faccea551278a3f408e1da525b952b83, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1110370792}
   m_SourcePrefab: {fileID: 100100000, guid: faccea551278a3f408e1da525b952b83, type: 3}
 --- !u!1001 &1742782266457432291
 PrefabInstance:

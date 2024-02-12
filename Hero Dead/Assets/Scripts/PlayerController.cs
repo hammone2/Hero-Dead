@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
 
     public CharacterController controller;
+    public GameBehaviour gameManager;
 
     public float speed = 12f;
     public float gravity = -19.62f;
@@ -63,6 +64,7 @@ public class PlayerController : MonoBehaviour
             Rigidbody bulletRB = newBullet.GetComponent<Rigidbody>();
 
             bulletRB.velocity = this.transform.forward * bulletSpeed;
+            
         }
 
 

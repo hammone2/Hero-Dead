@@ -5,6 +5,7 @@ using UnityEngine;
 public class ItemBehavior : MonoBehaviour
 {
     public GameBehaviour gameManager;
+
     void Start()
     {
         gameManager = GameObject.Find("Game Manager").GetComponent<GameBehaviour>();
